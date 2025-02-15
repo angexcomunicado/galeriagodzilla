@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3rem;
+    color: red;
+    margin-bottom: 0.4rem;
+}
+
+.gallery {
+    color: rgb(197, 197, 197);
+    margin-top: 0.2rem;
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+}
+
+.imagen {
+    width: 12rem;
+    margin: 0.3rem;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.imagen:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding-top: 5rem;
+    background-color: rgba( 0, 0, 0, 0.7);
+    /* lo de abajo fue copiado por chat gpt */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Esto también fue agregado por chat gpt, reforzar práctica de keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#close {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+#close:hover {
+    opacity: 1;
+}
+
+#imageModal {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+}
+
